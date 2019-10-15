@@ -20,7 +20,7 @@
 
             <div class="col-md-12"> <!-- Parametrizado para ocupar 12 unidades de largura -->
 
-                <form action= "create" method= "POST"> <!-- acrescentado o comando enctype="multipart/form-data" para poder ser enviado imagem também-->
+                <form action= "create" method= "POST" enctype="multipart/form-data">  acrescentado o comando enctype="multipart/form-data" para poder ser enviado imagem também-->
  
                     <div class="form-group">  <!-- No Bootstrap chamamos de "form-group" as subareas... neste exemplo a subaria é composta por 1 label, e imput e um "minilabel" para ser utilizado como texto de ajuda  -->
                         <labels for="project_Name">Nome</label>  <!-- Este campo FOR serve para linkar o label com o imput (perceber que o texto to FOR é o mesmo do ID do Imput) para quando a pessoa clicar no Label o cursor do mouse ir direto para o imput -->
@@ -37,7 +37,7 @@
 
                     <div class="form-group"> 
                         <label for="project_Image">Imagem</label>
-                        <input name="project_Image" type="text" class="form-control" id="project_Image"  placeholder="">
+                        <input name="project_Image" type="file" class="form-control" id="project_Image">
                     </div>
 
                     <div class="form-group">  
