@@ -3,7 +3,7 @@
 var express = require('express');
 var router = express.Router();
 var testimonialsService = require('../../services/testimonialsService')
-
+ 
 // Cada roteamento recebe 3 variáveis na function abaixo: req / res / next 
 
 router.get('/', function(req, res ,next) { // get é uma função que tem 2 parâmetros, o primeiro é a string '/' e o segundo é uma função

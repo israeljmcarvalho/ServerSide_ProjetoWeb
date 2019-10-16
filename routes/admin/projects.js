@@ -19,7 +19,7 @@ router.get('/create', function(req, res ,next) {
     var data = {lion: projects};
     res.render('admin/projects/create', data);
 });
-
+ 
 router.post('/create', upload.single('project_Image'), function(req, res ,next) {  // o comando post nesta linha refere-se ao verbo POST do http (Get, Post, Put e Delete) e rerefe-se a "colocar" uma informação
                                                  // A título de informação, informações enviadas com GET aparece na URL do Browser e com POST não
                                                  // upload.single('image') é um middleware importade de uma biblioteca de terceiro
