@@ -15,7 +15,7 @@ var verifyAuth = function(req, res, next) {
   }
 
   res.locals.loggedUser = null;
-  res.redirect('/auth/login');
+  res.redirect('/auth/login?redirect=' + req.originalUrl);
 }
 
 module.exports = verifyAuth;

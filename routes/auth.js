@@ -4,13 +4,17 @@ var authService = require('../services/authService');
 
 router.get('/login', function(req, res, next) {
 
-  res.render('login', { msg: '' });
+  var redirectPath = req.query.redirect;
+  console.log(redirectPath);
+
+  res.render('login', { msg: '', redirectPath: redirectPath });
 });
 
 router.post('/login', function(req, res, next) {
 
   var email = req.body.email;
   var password = req.body.password;
+  var redirectPath = req.body.redirectPath;
 
   if (authService.validateUserEmailAndPassword(email, password)) {
     if(!req.session.authenticatedUsers) {
@@ -23,7 +27,7 @@ router.post('/login', function(req, res, next) {
     req.session.authenticatedUsers.push(user);
     res.cookie('loginToken', user.loginToken, { maxAge: 900000, httpOnly: true });
 
-    res.redirect('/admin/projects');
+    res.redirect(redirectPath);
   } 
   
 
