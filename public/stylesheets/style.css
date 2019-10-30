@@ -101,3 +101,17 @@
     margin: 20px;
     font-size: 25px;
 }
+
+#idteste{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#nome_produto{
+    color: blue;
+}
+
+#preco_produto{
+    color: red;
+}
+
