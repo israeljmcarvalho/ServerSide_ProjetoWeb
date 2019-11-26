@@ -1,0 +1,50 @@
+<!-- ARQUIVO RESPONSÁVEL PELA ESTRUTURA DA PÁGINA http://localhost:3000/testimonials -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+      <%- include('navbar'); -%>
+
+
+
+      <div class ="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 id="id_projetos">Sensores</h1>
+                <a href="/admin/sensors" class=" btn btn btn-success">Administração de Sensores</a>
+            </div>
+        </div>
+
+        <div class ="row">
+
+          <% camel.forEach((camel3)=>{%>
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="/images/<%= camel3.image %>" class="card-img">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= camel3.name %></h5>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+          <% }); %>      
+
+        </div>
+
+      </div>
+    
+  </body>
+</html>

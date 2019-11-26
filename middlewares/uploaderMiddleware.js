@@ -1,4 +1,4 @@
-var multer = require ('multer');
+multer = require ('multer');
 var path = require ('path'); // Path é uma biblioteca do Node para extrair extensão do arquivo  
 
 var storage = multer.diskStorage({

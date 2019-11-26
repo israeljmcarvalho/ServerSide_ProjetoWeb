@@ -6,37 +6,40 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
 
-        <li class="nav-item active">
+        <li class="nav-item active" hidden>
            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active" hidden>
            <a class="nav-link" href="/posts">Relação Posts <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active" hidden>
             <a class="nav-link" href="/projects">Projetos <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active" hidden>
           <a class="nav-link" href="/notices">Notícias <span class="sr-only">(current)</span></a>
       </li>        
-        <li class="nav-item active">
+        <li class="nav-item active" hidden>
           <a class="nav-link" href="/testimonials">Testemunhos <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active" hidden>
           <a class="nav-link" href="/products">Produtos <span class="sr-only">(current)</span></a>
         </li>
-
+        <li class="nav-item active">
+          <a class="nav-link" href="/sensors">DISPLAY <span class="sr-only">(current)</span></a>
+        </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Administração
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/admin/projects">Projects</a>
-              <a class="dropdown-item" href="/admin/testimonials">Testimonials</a>
-              <a class="dropdown-item" href="/admin/products">Produtos</a>
+              <a class="dropdown-item" href="/admin/projects" hidden>Projects</a>
+              <a class="dropdown-item" href="/admin/testimonials" hidden>Testimonials</a>
+              <a class="dropdown-item" href="/admin/products" hidden>Produtos</a>
+              <a class="dropdown-item" href="/admin/sensors">IoT - Sensores de Temperatura</a>
+              <a class="dropdown-item" href="/admin/triggers">IoT - Dispositivos de Acionamento</a>
             </div>
-            
         </li>
-                    
+
       </ul>
 
       <% if (locals.loggedUser) { %>

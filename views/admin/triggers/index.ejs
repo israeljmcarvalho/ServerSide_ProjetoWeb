@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensores</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+
+<div class="container">
+  
+    <div class="row">
+      <h1 id="id_adm_page">Administração de Acionadores</h1>
+    </div>  
+
+    <div class="row mb-2">
+      <a href="/admin/triggers/create" class=" btn btn btn-success">Novo Acionador</a>
+    </div>  
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>  
+          <th scope="col">Código</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Status (0 Desligado / 1 Ligado)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%monkey.forEach((monkey2)=>{ %>
+          <tr>
+             <td><%=monkey2.id%></td>
+             <td><%=monkey2.name%></td>
+             <td><%=monkey2.status%></td>
+           </tr> 
+        <%}); %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

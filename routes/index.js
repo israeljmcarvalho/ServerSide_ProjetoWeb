@@ -2,14 +2,17 @@ var express = require('express');
 var router = express.Router();
 var lista_post = require('../services/postsService'); //Tipo dar um include do arquivo postsService
 var lista_project = require('../services/projectsService'); 
+var lista_sensor = require('../services/sensorsService'); 
 var lista_product = require('../services/productsService'); 
 var lista_notice = require('../services/noticesService');
 var lista_testimonial = require('../services/testimonialsService');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var xposts = lista_post.getPosts().slice(0, 3); // getPosts().slice(0, 3) defini que só será apresentado os 3 primeiros posts.
-  res.render('index', {title: 'BLog', posts:xposts}); //posts:posts = o primeiro posts refere-se ao nome que será utilizado como parâmetro no HTML principal, ja o segundo post é o nome da variavel declarada acima
+  var lsensors=lista_sensor.getSensors();
+  res.render('sensors', {title: 'Relação de Sensores', camel: lsensors});
+//  var xposts = lista_post.getPosts().slice(0, 3); // getPosts().slice(0, 3) defini que só será apresentado os 3 primeiros posts.
+//  res.render('index', {title: 'BLog', posts:xposts}); //posts:posts = o primeiro posts refere-se ao nome que será utilizado como parâmetro no HTML principal, ja o segundo post é o nome da variavel declarada acima
 });
 
 //================================================================================================================
@@ -59,6 +62,12 @@ router.get('/posts', function(req, res, next){
 router.get('/projects', function(req, res, next){
   var lprojects=lista_project.getProjects();
   res.render('projects', {title: 'Relação de Projetos', lion: lprojects});  //projects refere-se ao arquivo projects.ejs que é o arquivo onde as informações serão enviadas | lprojects é o que será rederizado (variável criada acima)
+});
+
+// O código abaixo refere-se a página http://localhost:3000/sensors onde estarão listados todos os projetos
+router.get('/sensors', function(req, res, next){
+  var lsensors=lista_sensor.getSensors();
+  res.render('sensors', {title: 'Relação de Sensores', camel: lsensors});  //sensors refere-se ao arquivo sensors.ejs que é o arquivo onde as informações serão enviadas | lprojects é o que será rederizado (variável criada acima)
 });
 
 // O código abaixo refere-se a página http://localhost:3000/products onde estarão listados todos os projetos

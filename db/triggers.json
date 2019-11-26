@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Acionador_01",
+        "status": "1"
+    },
+    {
+        "id": 2,
+        "name": "Acionador_02",
+        "status": "0"
+    },
+    {
+        "id": 3,
+        "name": "Acionador_03",
+        "status": "1"
+    },
+    {
+        "id": 4,
+        "name": "Acionador_04",
+        "status": "0"
+    },
+    {
+        "id": 5,
+        "name": "Acionador_05",
+        "status": "1"
+    }
+]

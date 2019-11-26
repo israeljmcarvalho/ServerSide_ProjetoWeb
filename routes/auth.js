@@ -27,6 +27,8 @@ router.post('/login', function(req, res, next) {
     req.session.authenticatedUsers.push(user);
     res.cookie('loginToken', user.loginToken, { maxAge: 900000, httpOnly: true });
 
+    console.log(redirectPath);
+
     res.redirect(redirectPath);
   } 
   

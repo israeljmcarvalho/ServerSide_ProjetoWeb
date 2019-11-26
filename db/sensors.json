@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Sensor_01",
+        "image": "sensor1.jpg",
+        "temperature": 100,
+        "humidity": 80
+    },
+    {
+        "id": 2,
+        "name": "Sensor_02",
+        "image": "sensor2.jpg",
+        "temperature": 70,
+        "humidity": 60
+    },
+    {
+        "id": 3,
+        "name": "Sensor_03",
+        "image": "sensor3.jpg",
+        "temperature": 50,
+        "humidity": 40
+    },
+    {
+        "id": 4,
+        "name": "Sensor_04",
+        "image": "sensor4.jpg",
+        "temperature": 30,
+        "humidity": 20
+    },
+    {
+        "id": 5,
+        "name": "Sensor_05",
+        "temperature": "3",
+        "humidity": "2",
+        "image": "sensor_Image-1574297431799.jpg"
+    }
+]

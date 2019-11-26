@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensores</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+
+<div class="container">
+  
+    <div class="row">
+      <h1 id="id_adm_page">Administração de Sensores</h1>
+    </div>  
+
+    <div class="row mb-2">
+      <a href="/admin/sensors/create" class=" btn btn btn-success">Novo Sensor</a>
+    </div>  
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>  
+          <th scope="col">Código</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Temperatura</th>
+          <th scope="col">Umidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%camel.forEach((camel2)=>{ %>
+          <tr>
+             <td><%=camel2.id%></td>
+             <td><%=camel2.name%></td>
+             <td><%=camel2.temperature%></td>
+             <td><%=camel2.humidity%></td>
+           </tr> 
+        <%}); %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
